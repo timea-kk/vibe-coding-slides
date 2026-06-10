@@ -28,6 +28,26 @@
   .eyebrow { font-family:var(--ff-body);font-size:24.6px;color:var(--honey-400);letter-spacing:0.06em;text-transform:uppercase; }
   .slide-tag { position:absolute;top:56px;right:80px;font-family:var(--ff-head);font-weight:600;font-size:20.2px;color:var(--violet-500);letter-spacing:0.12em;text-transform:uppercase; }
 
+  /* ── SLIDE 00 — Intro ── */
+  .s-intro { background:var(--violet-900);align-items:center;justify-content:center; }
+  .s-intro .bg-circle { position:absolute;border-radius:50%;background:var(--violet-800);opacity:0.35; }
+  .s-intro .bc1 { width:800px;height:800px;top:-320px;right:-180px; }
+  .s-intro .bc2 { width:400px;height:400px;bottom:-160px;left:-80px;background:var(--violet-700);opacity:0.25; }
+  .s-intro .hdot { position:absolute;border-radius:50%;background:var(--honey-500); }
+  .s-intro .hd1 { width:16px;height:16px;top:200px;left:320px; }
+  .s-intro .hd2 { width:10px;height:10px;bottom:160px;right:400px; }
+  .s-intro .hd3 { width:7px;height:7px;top:90px;left:960px; }
+  .intro-inner { position:relative;z-index:2;display:flex;align-items:center;gap:96px;padding:0 160px; }
+  .intro-photo { width:380px;height:380px;border-radius:50%;flex-shrink:0;overflow:hidden;border:6px solid var(--honey-500);box-shadow:0 0 0 16px rgba(237,183,59,0.08); }
+  .intro-photo img { width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block; }
+  .intro-text { display:flex;flex-direction:column;gap:18px; }
+  .intro-text h1 { font-family:var(--ff-head);font-weight:800;font-size:107.5px;color:#fff;letter-spacing:-0.03em;line-height:1; }
+  .intro-role { font-family:var(--ff-head);font-weight:600;font-size:34px;color:var(--violet-200); }
+  .intro-role span { color:var(--honey-400); }
+  .intro-interests { display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;max-width:760px; }
+  .interest-chip { background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:10px;padding:9px 18px;font-family:var(--ff-head);font-size:19px;font-weight:500;color:var(--violet-100); }
+  .interest-chip.honey { border-color:var(--honey-500);color:var(--honey-300);background:rgba(237,183,59,0.1); }
+
   /* ── SLIDE 01 — Overview ── */
   .s-overview { background:var(--violet-900);flex-direction:column;align-items:stretch; }
   .s-overview .bg-circle { position:absolute;border-radius:50%;background:var(--violet-800);opacity:0.35; }
@@ -295,6 +315,31 @@
 </head>
 <body>
 <deck-stage>
+
+  <!-- ── 00 INTRO ── -->
+  <section class="s-intro" data-screen-label="Intro">
+    <div class="bg-circle bc1"></div>
+    <div class="bg-circle bc2"></div>
+    <div class="hdot hd1"></div>
+    <div class="hdot hd2"></div>
+    <div class="hdot hd3"></div>
+    <div class="intro-inner">
+      <div class="intro-photo">
+        <img src="profile.jpg" alt="Timea Konya">
+      </div>
+      <div class="intro-text">
+        <div class="eyebrow">Hi, I'm</div>
+        <h1>Timea Konya</h1>
+        <div class="intro-role">Senior Product Designer <span>@ Statista</span></div>
+        <div class="intro-interests">
+          <span class="interest-chip">Design systems enthusiast</span>
+          <span class="interest-chip">Design ops fan</span>
+          <span class="interest-chip">Wannabe design engineer</span>
+          <span class="interest-chip honey">Iguana lover 🦎</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ── 01 OVERVIEW ── -->
   <section class="s-overview" data-screen-label="01 Overview">
